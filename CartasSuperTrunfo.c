@@ -3,14 +3,29 @@
 
 int main() {
     //variáveis carta 1 e 2
-    int populacao, populacao2, pontosturisticos, pontosturisticos2;
-    char estado, estado2, cidade [70], cidade2 [70], codigo [10], codigo [10];
-    float pib, pib2, area, area2;
+        int populacao, pontosturisticos;
+            char cidade [70], code [3];
+            char estado [1];
+                float pib, area;
 
-    printf("Estado: \n");
-    scanf("%s", estado);
+                    //cadastramento da carta 1
 
-    printf("")
+                        printf("Digite uma letra entre A e H para um estado: \n");
+                            scanf("%c", estado);
+
+                                printf("Código da carta: \n");
+                                    scanf("%s", code);
+
+                                        printf("Nome da cidade: \n");
+                                            scanf("%50s", cidade);
+
+                                                printf("População: \n");
+                                                    scanf("%d", &populacao);
+
+                                                        printf("Área em KM²: \n");
+                                                            scanf("%f", &area);
+    
+
 
     return 0;
 }
