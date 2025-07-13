@@ -8,7 +8,9 @@ int main() {
         int pontosturisticos;
             char cidade [70], code [3];
             char estado [10];
-                float pib, area;
+                float pib, area, densidade, pibcapta;
+                
+            
 
                     //cadastramento da carta 1
 
@@ -41,9 +43,18 @@ int main() {
                                                             printf("Código da carta: %s\n", code);
                                                             printf("Nome da cidade: %s\n", cidade);
                                                             printf("População: %d\n", populacao);
-                                                            printf("Área em KM²: %f\n", area);
-                                                            printf("PIB: %f\n", pib);
+                                                            printf("Área em KM²: %.2f\n", area);
+                                                            printf("PIB: %.2f\n", pib);
                                                             printf("Pontos Turísticos: %d\n", pontosturisticos);
+
+                                                            //adição da densidade populacional  e pib per capta
+                                                            densidade = (float)populacao/area;   
+
+                                                            pibcapta = (float)pib/populacao;
+
+                                                            printf("Densidade populacional: %.2f\n", densidade);
+                                                            printf("PIB per Capita: %.2f\n", pibcapta);
+                                                        
            
                                                             
 
@@ -85,6 +96,10 @@ int main() {
                                                             printf("Área em KM²: %f\n", area2);
                                                             printf("PIB: %f\n", pib2);
                                                             printf("Pontos Turísticos: %d\n", pontosturisticos2);
+                                                            
+
+
+                                                            
   
                                         return 0;
 
