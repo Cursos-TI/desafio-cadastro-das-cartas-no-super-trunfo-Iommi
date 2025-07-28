@@ -20,7 +20,7 @@ int main() {
                                 printf("Código: \n");
                                     scanf("%s", code);
 
-                                        printf("Nome da cidade: \n");
+                                        printf("Nome da cidade: (Não use espaço)\n");
                                             scanf("%s", cidade);
 
                                                 printf("População: \n");
@@ -46,14 +46,20 @@ int main() {
                                                             printf("Área em KM²: %.2f\n", area);
                                                             printf("PIB: %.2f\n", pibb);
                                                             printf("Pontos Turísticos: %d\n", pontosturisticos);
+                                                            
 
-                                                            //adição da densidade populacional  e pib per capta
+                                                            //adição da densidade populacional, pib per capta e superpoder
                                                             densidade = (float)populacao/area;   
 
                                                             pibcapta = (float)pibb/populacao;
 
+                                                            float SuperPoder = populacao + area + pibb + pontosturisticos + pibcapta + (1/densidade);
+
+
+
                                                             printf("Densidade populacional: %.2f\n", densidade);
                                                             printf("PIB per Capita: %.2f\n", pibcapta);
+                                                            printf("Super Poder: %.2f\n", SuperPoder);
                                                            
 
                                                         
@@ -106,25 +112,87 @@ int main() {
 
                                                             pibcapta2 = (float)pib2/populacao2;
 
+                                                            float SuperPoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibcapta2 + (1/densidade2);
+
                                                             printf("Densidade populacional: %.2f\n", densidade2);
                                                             printf("PIB per Capita: %.2f\n", pibcapta2);
+                                                            printf("Super Poder: %.2f\n", SuperPoder2);
                                                            
-            float SuperPoder = populacao + area + pibb + pontosturisticos + pibcapta + (1/densidade);
-                 float SuperPoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibcapta2 + (1/densidade2);
+           
+                
         
 
-                 //print dos resultados da comparação
+                 //print dos resultados da comparação e adição da estrutura if else para o código ficar mais claro
 
-                     printf("Comparação de cartas:\n");
-                         printf("População:%d\n", populacao > populacao2);
-                             printf("Área:%d\n", area > area2);
-                                 printf("PIB:%d\n", pibb > pib2);
-                                     printf("Pontos turísticos:%d\n", pontosturisticos > pontosturisticos2);
-                                        printf("Densidade Populacional:%d\n", densidade < densidade2);
-                                            printf("PIB per Capta:%d\n", pibcapta > pibcapta2);
-                                                 printf("Super Poder:%d\n", SuperPoder > SuperPoder2);
-                                                    printf("Carta 1 vence a comparação com resultado: 1");
-                                                    printf("Carta 2 vence a comparação com resultado: 0");
+                     printf("Comparação de cartas (Atributo: população):\n");
+                     printf("Carta 1 - %s : %d\n", cidade, populacao);  //para printar o nome da cidade assim como no exemplo da aula
+                     printf("Carta 2 - %s : %d\n", cidade2, populacao2);
+
+                        if (populacao > populacao2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        } 
+                          printf("Comparação de cartas (Atributo: Área em KM²):\n");
+                         printf("Carta 1 - %s : %.2f\n", cidade, area);  //para printar o nome da cidade assim como no exemplo da aula
+                         printf("Carta 2 - %s : %.2f\n", cidade2, area2);
+                          
+                             if (area > area2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        } 
+                                 printf("Comparação de cartas (Atributo: PIB):\n");
+                                 printf("Carta 1 - %s : %.2f\n", cidade, pibb);  //para printar o nome da cidade assim como no exemplo da aula
+                                 printf("Carta 2 - %s : %.2f\n", cidade2, pib2);
+
+                             if (pibb > pib2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        }
+
+                           printf("Comparação de cartas (Atributo: Pontos Turísticos):\n");
+                           printf("Carta 1 - %s : %d\n", cidade, pontosturisticos);  //para printar o nome da cidade assim como no exemplo da aula
+                         printf("Carta 2 - %s : %d\n", cidade2, pontosturisticos2);
+
+                             if (pontosturisticos > pontosturisticos2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        }
+                            printf("Comparação de cartas (Atributo: Densidade Populacional):\n");
+                            printf("Carta 2 - %s : %.2f\n", cidade, densidade);  //para printar o nome da cidade assim como no exemplo da aula
+                         printf("Carta 2 - %s : %.2f\n", cidade2, densidade2);
+
+                             if (densidade < densidade2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        }
+                             printf("Comparação de cartas (Atributo: PIB per Capta):\n");
+                             printf("Carta1 - %s : %.2f\n", cidade, pibcapta);  //para printar o nome da cidade assim como no exemplo da aula
+                         printf("Carta 2 - %s : %.2f\n", cidade2, pibcapta2);
+
+                             if (pibcapta > pibcapta2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        }
+                             printf("Comparação de cartas (Atributo: Super Poder):\n");
+                             printf("Carta1 - %s : %.2f\n", cidade, SuperPoder);  //para printar o nome da cidade assim como no exemplo da aula
+                         printf("Carta 2 - %s : %.2f\n", cidade2, SuperPoder2);
+                             
+                             
+                             if (SuperPoder > SuperPoder2){
+                            printf("Resultado: Carta 1 Venceu!\n");
+                        } else {
+                            printf("Resultado: Carta 2 Venceu!\n");
+                        }
+                        // terminada a adição das condicionais e a impressão de um resultado mais preciso
+
+                        printf("Vence a carta que mais venceu as comparações\n");
+                        
                                                  
                                                 
                                                             
