@@ -73,7 +73,7 @@ int main() {
 
                                                             //Impressão da carta
 
-                                                            printf("\nCarta 1: \n");
+                                                            printf("Carta 1: \n");
                                                             printf("Estado: %s\n", estado);
                                                             printf("Código da carta: %s\n", code);
                                                             printf("Nome da cidade: %s\n", cidade);
